@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+__pycache__/
+.pytest_cache/
+backend/data/dga.sqlite3
+backend/data/uploads/

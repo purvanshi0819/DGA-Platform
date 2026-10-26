@@ -1,0 +1,67 @@
+{
+ "raw_rows": 627,
+ "columns": [
+  "H2",
+  "CH4",
+  "C2H6",
+  "C2H4",
+  "C2H2",
+  "CO",
+  "Fault"
+ ],
+ "missing_values": {
+  "H2": 0,
+  "CH4": 0,
+  "C2H6": 0,
+  "C2H4": 0,
+  "C2H2": 0,
+  "CO": 0,
+  "Fault": 0
+ },
+ "duplicate_rows": 175,
+ "conflicting_label_rows_6gas_key": 10,
+ "conflicting_label_rows_5gas_key": 13,
+ "zero_values": {
+  "H2": 0,
+  "CH4": 0,
+  "C2H6": 0,
+  "C2H4": 0,
+  "C2H2": 0,
+  "CO": 0
+ },
+ "min_values": {
+  "H2": 0.01,
+  "CH4": 0.01,
+  "C2H6": 0.01,
+  "C2H4": 0.7,
+  "C2H2": 0.01,
+  "CO": 0.01
+ },
+ "class_counts_raw": {
+  "OH": 441,
+  "Normal": 105,
+  "PD": 73,
+  "Arcing": 8
+ },
+ "protocols": {
+  "dedup_only (notebooks B, C)": {
+   "rows": 452,
+   "class_counts": {
+    "OH": 317,
+    "Normal": 75,
+    "PD": 55,
+    "Arcing": 5
+   }
+  },
+  "dedup_and_conflict_removal (notebook A)": {
+   "rows": 442,
+   "class_counts": {
+    "OH": 314,
+    "Normal": 70,
+    "PD": 54,
+    "Arcing": 4
+   }
+  }
+ },
+ "sha256": "239904f8526a69609da3b9e0d707c0af76f1afbb8e7c83073e8e1f0a382e4aa6"
+}

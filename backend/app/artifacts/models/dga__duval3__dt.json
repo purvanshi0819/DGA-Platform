@@ -1,0 +1,34 @@
+{
+  "id": "dga__duval3__dt",
+  "implementation": "B",
+  "implementation_label": "DGA feature cases",
+  "feature_set": "duval3",
+  "model_name": "DT",
+  "classes": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+  ],
+  "label_encoding": "string_labels",
+  "supports_proba": true,
+  "provenance": {
+    "origin": "newly_run",
+    "note": "The source notebooks contain no executed outputs; every value was computed by this pipeline.",
+    "created_utc": "2026-10-25T17:11:52+00:00",
+    "seed": 42,
+    "dataset_file": "DuVal.csv",
+    "dataset_sha256": "239904f8526a69609da3b9e0d707c0af76f1afbb8e7c83073e8e1f0a382e4aa6",
+    "cleaning_protocol": "dedup only",
+    "n_rows": 452,
+    "versions": {
+      "python": "3.12.3",
+      "scikit_learn": "1.8.0"
+    }
+  },
+  "trained_on": "80% stratified training split",
+  "metrics_ref": {
+    "experiment": "dga_main",
+    "model": "duval3|DT"
+  }
+}

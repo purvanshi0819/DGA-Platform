@@ -1,0 +1,706 @@
+{
+ "id": "rfrep_main",
+ "implementation": "A",
+ "title": "Random Forest comparative ML (replication)",
+ "status": "completed",
+ "kind": "replication",
+ "provenance": {
+  "origin": "newly_run",
+  "note": "The source notebooks contain no executed outputs; every value was computed by this pipeline.",
+  "created_utc": "2026-10-25T17:20:41+00:00",
+  "seed": 42,
+  "dataset_file": "DuVal.csv",
+  "dataset_sha256": "239904f8526a69609da3b9e0d707c0af76f1afbb8e7c83073e8e1f0a382e4aa6",
+  "cleaning_protocol": "dedup + conflicting-label removal (6-gas key)",
+  "n_rows": 442,
+  "versions": {
+   "python": "3.12.3",
+   "scikit_learn": "1.8.0"
+  }
+ },
+ "seconds": 138.3,
+ "records": [
+  {
+   "feature_set": "rf15",
+   "model": "Random Forest",
+   "stage": "gridsearch_cv",
+   "n": 353,
+   "metrics": {
+    "accuracy": 0.9640896872535291
+   },
+   "best_params": {
+    "m__max_features": "sqrt",
+    "m__min_samples_leaf": 1,
+    "m__n_estimators": 50
+   }
+  },
+  {
+   "feature_set": "rf15",
+   "model": "Random Forest",
+   "stage": "test",
+   "n": 89,
+   "metrics": {
+    "accuracy": 0.9438202247191011,
+    "macro": {
+     "precision": 0.703125,
+     "recall": 0.7014790764790765,
+     "f1": 0.7007296466973887
+    },
+    "weighted": {
+     "precision": 0.9592696629213483,
+     "recall": 0.9438202247191011,
+     "f1": 0.950487581767031
+    },
+    "specificity_weighted": 0.9934525025536262,
+    "mcc": 0.8825938023599682
+   }
+  },
+  {
+   "feature_set": "rf15",
+   "model": "KNN",
+   "stage": "gridsearch_cv",
+   "n": 353,
+   "metrics": {
+    "accuracy": 0.9546654433660083
+   },
+   "best_params": {
+    "m__n_neighbors": 1
+   }
+  },
+  {
+   "feature_set": "rf15",
+   "model": "KNN",
+   "stage": "test",
+   "n": 89,
+   "metrics": {
+    "accuracy": 0.9550561797752809,
+    "macro": {
+     "precision": 0.7126984126984127,
+     "recall": 0.7054473304473304,
+     "f1": 0.7082649151614668
+    },
+    "weighted": {
+     "precision": 0.9565543071161048,
+     "recall": 0.9550561797752809,
+     "f1": 0.9553698271249609
+    },
+    "specificity_weighted": 0.9684519787328776,
+    "mcc": 0.9022044044985867
+   }
+  },
+  {
+   "feature_set": "rf15",
+   "model": "SVM (RBF)",
+   "stage": "gridsearch_cv",
+   "n": 353,
+   "metrics": {
+    "accuracy": 0.9546573953353614
+   },
+   "best_params": {
+    "m__C": 10,
+    "m__gamma": 0.1
+   }
+  },
+  {
+   "feature_set": "rf15",
+   "model": "SVM (RBF)",
+   "stage": "test",
+   "n": 89,
+   "metrics": {
+    "accuracy": 0.9325842696629213,
+    "macro": {
+     "precision": 0.6661764705882353,
+     "recall": 0.6787518037518038,
+     "f1": 0.6699308755760369
+    },
+    "weighted": {
+     "precision": 0.9393919365499009,
+     "recall": 0.9325842696629213,
+     "f1": 0.9343188525863407
+    },
+    "specificity_weighted": 0.9898982478195962,
+    "mcc": 0.8586494838016446
+   }
+  },
+  {
+   "feature_set": "rf15",
+   "model": "ANN",
+   "stage": "gridsearch_cv",
+   "n": 353,
+   "metrics": {
+    "accuracy": 0.9319941410336889
+   },
+   "best_params": {
+    "m__alpha": 0.0001,
+    "m__learning_rate_init": 0.01
+   }
+  },
+  {
+   "feature_set": "rf15",
+   "model": "ANN",
+   "stage": "test",
+   "n": 89,
+   "metrics": {
+    "accuracy": 0.9325842696629213,
+    "macro": {
+     "precision": 0.6990266393442623,
+     "recall": 0.6975108225108225,
+     "f1": 0.6966973886328724
+    },
+    "weighted": {
+     "precision": 0.9476653158961134,
+     "recall": 0.9325842696629213,
+     "f1": 0.9390704016292998
+    },
+    "specificity_weighted": 0.9662269191482675,
+    "mcc": 0.8587688559207698
+   }
+  }
+ ],
+ "confusion": {
+  "Random Forest": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     0,
+     1,
+     0,
+     0
+    ],
+    [
+     1,
+     13,
+     0,
+     0
+    ],
+    [
+     0,
+     2,
+     61,
+     0
+    ],
+    [
+     1,
+     0,
+     0,
+     10
+    ]
+   ]
+  },
+  "KNN": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     0,
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     13,
+     1,
+     0
+    ],
+    [
+     0,
+     1,
+     62,
+     0
+    ],
+    [
+     1,
+     0,
+     0,
+     10
+    ]
+   ]
+  },
+  "SVM (RBF)": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     0,
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     13,
+     0,
+     1
+    ],
+    [
+     0,
+     2,
+     61,
+     0
+    ],
+    [
+     1,
+     1,
+     0,
+     9
+    ]
+   ]
+  },
+  "ANN": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     0,
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     13,
+     1,
+     0
+    ],
+    [
+     1,
+     2,
+     60,
+     0
+    ],
+    [
+     1,
+     0,
+     0,
+     10
+    ]
+   ]
+  }
+ },
+ "per_class": {
+  "Random Forest": {
+   "Arcing": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.8125,
+    "recall": 0.9285714285714286,
+    "f1-score": 0.8666666666666667,
+    "support": 14
+   },
+   "OH": {
+    "precision": 1.0,
+    "recall": 0.9682539682539683,
+    "f1-score": 0.9838709677419355,
+    "support": 63
+   },
+   "PD": {
+    "precision": 1.0,
+    "recall": 0.9090909090909091,
+    "f1-score": 0.9523809523809523,
+    "support": 11
+   }
+  },
+  "KNN": {
+   "Arcing": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.8666666666666667,
+    "recall": 0.9285714285714286,
+    "f1-score": 0.896551724137931,
+    "support": 14
+   },
+   "OH": {
+    "precision": 0.9841269841269841,
+    "recall": 0.9841269841269841,
+    "f1-score": 0.9841269841269841,
+    "support": 63
+   },
+   "PD": {
+    "precision": 1.0,
+    "recall": 0.9090909090909091,
+    "f1-score": 0.9523809523809523,
+    "support": 11
+   }
+  },
+  "SVM (RBF)": {
+   "Arcing": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.7647058823529411,
+    "recall": 0.9285714285714286,
+    "f1-score": 0.8387096774193549,
+    "support": 14
+   },
+   "OH": {
+    "precision": 1.0,
+    "recall": 0.9682539682539683,
+    "f1-score": 0.9838709677419355,
+    "support": 63
+   },
+   "PD": {
+    "precision": 0.9,
+    "recall": 0.8181818181818182,
+    "f1-score": 0.8571428571428571,
+    "support": 11
+   }
+  },
+  "ANN": {
+   "Arcing": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.8125,
+    "recall": 0.9285714285714286,
+    "f1-score": 0.8666666666666667,
+    "support": 14
+   },
+   "OH": {
+    "precision": 0.9836065573770492,
+    "recall": 0.9523809523809523,
+    "f1-score": 0.967741935483871,
+    "support": 63
+   },
+   "PD": {
+    "precision": 1.0,
+    "recall": 0.9090909090909091,
+    "f1-score": 0.9523809523809523,
+    "support": 11
+   }
+  }
+ },
+ "labels": [
+  "Arcing",
+  "Normal",
+  "OH",
+  "PD"
+ ],
+ "feature_importance": [
+  {
+   "feature": "log_C2H2",
+   "importance": 0.028089887640449424,
+   "std": 0.02549843981552858
+  },
+  {
+   "feature": "R_CH4_H2",
+   "importance": 0.005056179775280912,
+   "std": 0.006623497821658215
+  },
+  {
+   "feature": "R_C2H2_CH4",
+   "importance": 0.0016853932584269705,
+   "std": 0.008160583733895497
+  },
+  {
+   "feature": "R_C2H2_C2H4",
+   "importance": 0.0,
+   "std": 0.0
+  },
+  {
+   "feature": "R_C2H2_H2",
+   "importance": 0.0,
+   "std": 0.0
+  },
+  {
+   "feature": "Duval_C2H2pct",
+   "importance": -0.0005617977528089901,
+   "std": 0.009041279179455686
+  },
+  {
+   "feature": "log_CH4",
+   "importance": -0.0011235955056179802,
+   "std": 0.0033707865168539413
+  },
+  {
+   "feature": "TCG",
+   "importance": -0.0011235955056179802,
+   "std": 0.0033707865168539413
+  },
+  {
+   "feature": "log_C2H6",
+   "importance": -0.0022471910112359605,
+   "std": 0.004494382022471921
+  },
+  {
+   "feature": "log_H2",
+   "importance": -0.007865168539325862,
+   "std": 0.007194521615093106
+  },
+  {
+   "feature": "log_C2H4",
+   "importance": -0.008426966292134852,
+   "std": 0.004865311257215959
+  },
+  {
+   "feature": "R_C2H4_C2H6",
+   "importance": -0.010674157303370813,
+   "std": 0.006623497821658217
+  },
+  {
+   "feature": "R_C2H6_C2H2",
+   "importance": -0.010674157303370813,
+   "std": 0.004315250420150914
+  },
+  {
+   "feature": "Duval_C2H4pct",
+   "importance": -0.018539325842696665,
+   "std": 0.009583551746759547
+  },
+  {
+   "feature": "Duval_CH4pct",
+   "importance": -0.021910112359550583,
+   "std": 0.01093703501906279
+  }
+ ],
+ "oob_curve": [
+  {
+   "trees": 20,
+   "oob_error": 0.010956175298804771
+  },
+  {
+   "trees": 30,
+   "oob_error": 0.006972111553784854
+  },
+  {
+   "trees": 40,
+   "oob_error": 0.006972111553784854
+  },
+  {
+   "trees": 50,
+   "oob_error": 0.009960159362549792
+  },
+  {
+   "trees": 60,
+   "oob_error": 0.009960159362549792
+  },
+  {
+   "trees": 70,
+   "oob_error": 0.006972111553784854
+  },
+  {
+   "trees": 80,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 90,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 100,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 110,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 120,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 130,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 140,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 150,
+   "oob_error": 0.009960159362549792
+  },
+  {
+   "trees": 160,
+   "oob_error": 0.009960159362549792
+  },
+  {
+   "trees": 170,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 180,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 190,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 200,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 210,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 220,
+   "oob_error": 0.010956175298804771
+  },
+  {
+   "trees": 230,
+   "oob_error": 0.009960159362549792
+  },
+  {
+   "trees": 240,
+   "oob_error": 0.009960159362549792
+  },
+  {
+   "trees": 250,
+   "oob_error": 0.009960159362549792
+  },
+  {
+   "trees": 260,
+   "oob_error": 0.009960159362549792
+  },
+  {
+   "trees": 270,
+   "oob_error": 0.009960159362549792
+  },
+  {
+   "trees": 280,
+   "oob_error": 0.009960159362549792
+  },
+  {
+   "trees": 290,
+   "oob_error": 0.009960159362549792
+  },
+  {
+   "trees": 300,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 310,
+   "oob_error": 0.009960159362549792
+  },
+  {
+   "trees": 320,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 330,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 340,
+   "oob_error": 0.009960159362549792
+  },
+  {
+   "trees": 350,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 360,
+   "oob_error": 0.009960159362549792
+  },
+  {
+   "trees": 370,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 380,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 390,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 400,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 410,
+   "oob_error": 0.009960159362549792
+  },
+  {
+   "trees": 420,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 430,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 440,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 450,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 460,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 470,
+   "oob_error": 0.006972111553784854
+  },
+  {
+   "trees": 480,
+   "oob_error": 0.007968127490039834
+  },
+  {
+   "trees": 490,
+   "oob_error": 0.008964143426294813
+  },
+  {
+   "trees": 500,
+   "oob_error": 0.008964143426294813
+  }
+ ],
+ "split": {
+  "test_size": 0.2,
+  "random_state": 42,
+  "stratified": true,
+  "n_rows": 442,
+  "n_train": 353,
+  "n_test": 89,
+  "train_class_counts": [
+   3,
+   56,
+   251,
+   43
+  ],
+  "test_class_counts": [
+   1,
+   14,
+   63,
+   11
+  ],
+  "cv": "RepeatedStratifiedKFold(n_splits=3, n_repeats=3, random_state=42)"
+ }
+}

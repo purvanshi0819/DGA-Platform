@@ -1,0 +1,1984 @@
+{
+ "id": "dga_main",
+ "implementation": "B",
+ "title": "Duval / Doernenburg / Rogers feature cases x 6 classifiers",
+ "status": "completed",
+ "kind": "replication",
+ "provenance": {
+  "origin": "newly_run",
+  "note": "The source notebooks contain no executed outputs; every value was computed by this pipeline.",
+  "created_utc": "2026-10-25T17:11:52+00:00",
+  "seed": 42,
+  "dataset_file": "DuVal.csv",
+  "dataset_sha256": "239904f8526a69609da3b9e0d707c0af76f1afbb8e7c83073e8e1f0a382e4aa6",
+  "cleaning_protocol": "dedup only",
+  "n_rows": 452,
+  "versions": {
+   "python": "3.12.3",
+   "scikit_learn": "1.8.0"
+  }
+ },
+ "seconds": 14.4,
+ "records": [
+  {
+   "feature_set": "duval3",
+   "model": "RF",
+   "stage": "cv10_train",
+   "n": 361,
+   "metrics": {
+    "accuracy": 0.8781163434903048,
+    "macro": {
+     "precision": 0.6156764773506782,
+     "recall": 0.5719532279314888,
+     "f1": 0.5850589359668684
+    },
+    "weighted": {
+     "precision": 0.8737116964410476,
+     "recall": 0.8781163434903048,
+     "f1": 0.8712915905901304
+    },
+    "specificity_weighted": 0.8871523076818019,
+    "mcc": 0.731230066641043
+   }
+  },
+  {
+   "feature_set": "duval3",
+   "model": "RF",
+   "stage": "test",
+   "n": 91,
+   "metrics": {
+    "accuracy": 0.9120879120879121,
+    "macro": {
+     "precision": 0.6298076923076923,
+     "recall": 0.6279119318181818,
+     "f1": 0.6282106240845926
+    },
+    "weighted": {
+     "precision": 0.9019864750633982,
+     "recall": 0.9120879120879121,
+     "f1": 0.9066536649861051
+    },
+    "specificity_weighted": 0.9362064348906454,
+    "mcc": 0.8075112939211994
+   }
+  },
+  {
+   "feature_set": "duval3",
+   "model": "BPNN",
+   "stage": "cv10_train",
+   "n": 361,
+   "metrics": {
+    "accuracy": 0.850415512465374,
+    "macro": {
+     "precision": 0.5625470246599431,
+     "recall": 0.520602766798419,
+     "f1": 0.5374861323320976
+    },
+    "weighted": {
+     "precision": 0.8250770584433462,
+     "recall": 0.850415512465374,
+     "f1": 0.8341312577357557
+    },
+    "specificity_weighted": 0.8173296560134165,
+    "mcc": 0.6580029985659693
+   }
+  },
+  {
+   "feature_set": "duval3",
+   "model": "BPNN",
+   "stage": "test",
+   "n": 91,
+   "metrics": {
+    "accuracy": 0.8571428571428571,
+    "macro": {
+     "precision": 0.569927536231884,
+     "recall": 0.5445785984848486,
+     "f1": 0.5507551487414187
+    },
+    "weighted": {
+     "precision": 0.8381111641981207,
+     "recall": 0.8571428571428571,
+     "f1": 0.8426786028616692
+    },
+    "specificity_weighted": 0.8311612364243943,
+    "mcc": 0.6768412361461339
+   }
+  },
+  {
+   "feature_set": "duval3",
+   "model": "KNN",
+   "stage": "cv10_train",
+   "n": 361,
+   "metrics": {
+    "accuracy": 0.9085872576177285,
+    "macro": {
+     "precision": 0.7723238902674388,
+     "recall": 0.7135210803689065,
+     "f1": 0.7301137046826391
+    },
+    "weighted": {
+     "precision": 0.9145177901656324,
+     "recall": 0.9085872576177285,
+     "f1": 0.9095893160870705
+    },
+    "specificity_weighted": 0.9412433837251233,
+    "mcc": 0.8077446778480468
+   }
+  },
+  {
+   "feature_set": "duval3",
+   "model": "KNN",
+   "stage": "test",
+   "n": 91,
+   "metrics": {
+    "accuracy": 0.9010989010989011,
+    "macro": {
+     "precision": 0.6313131313131313,
+     "recall": 0.6495265151515152,
+     "f1": 0.631124673060157
+    },
+    "weighted": {
+     "precision": 0.9156399156399155,
+     "recall": 0.9010989010989011,
+     "f1": 0.9020531343111988
+    },
+    "specificity_weighted": 0.981137941006362,
+    "mcc": 0.8033573108771885
+   }
+  },
+  {
+   "feature_set": "duval3",
+   "model": "SVM",
+   "stage": "cv10_train",
+   "n": 361,
+   "metrics": {
+    "accuracy": 0.8864265927977839,
+    "macro": {
+     "precision": 0.6445301581977751,
+     "recall": 0.5796113306982872,
+     "f1": 0.5998167990377151
+    },
+    "weighted": {
+     "precision": 0.8847613530591617,
+     "recall": 0.8864265927977839,
+     "f1": 0.8791244896439548
+    },
+    "specificity_weighted": 0.8764317805257057,
+    "mcc": 0.747810111535156
+   }
+  },
+  {
+   "feature_set": "duval3",
+   "model": "SVM",
+   "stage": "test",
+   "n": 91,
+   "metrics": {
+    "accuracy": 0.8901098901098901,
+    "macro": {
+     "precision": 0.6191510695187166,
+     "recall": 0.5885179924242424,
+     "f1": 0.5983932186234818
+    },
+    "weighted": {
+     "precision": 0.8837559499324206,
+     "recall": 0.8901098901098901,
+     "f1": 0.8840498064688349
+    },
+    "specificity_weighted": 0.9073316303579461,
+    "mcc": 0.7573032122725946
+   }
+  },
+  {
+   "feature_set": "duval3",
+   "model": "DT",
+   "stage": "cv10_train",
+   "n": 361,
+   "metrics": {
+    "accuracy": 0.9058171745152355,
+    "macro": {
+     "precision": 0.747338843790518,
+     "recall": 0.7787384716732543,
+     "f1": 0.759238485999946
+    },
+    "weighted": {
+     "precision": 0.9174241803160289,
+     "recall": 0.9058171745152355,
+     "f1": 0.9098361539926425
+    },
+    "specificity_weighted": 0.9536074853135638,
+    "mcc": 0.8063513517675868
+   }
+  },
+  {
+   "feature_set": "duval3",
+   "model": "DT",
+   "stage": "test",
+   "n": 91,
+   "metrics": {
+    "accuracy": 0.9340659340659341,
+    "macro": {
+     "precision": 0.678125,
+     "recall": 0.6673058712121213,
+     "f1": 0.6719946297035452
+    },
+    "weighted": {
+     "precision": 0.9460164835164836,
+     "recall": 0.9340659340659341,
+     "f1": 0.9396184569449202
+    },
+    "specificity_weighted": 0.9917381595013174,
+    "mcc": 0.8604258998134812
+   }
+  },
+  {
+   "feature_set": "duval3",
+   "model": "NB",
+   "stage": "cv10_train",
+   "n": 361,
+   "metrics": {
+    "accuracy": 0.8421052631578947,
+    "macro": {
+     "precision": 0.6103830762069101,
+     "recall": 0.652931488801054,
+     "f1": 0.6167838138502932
+    },
+    "weighted": {
+     "precision": 0.8331094243079212,
+     "recall": 0.8421052631578947,
+     "f1": 0.8323303045125393
+    },
+    "specificity_weighted": 0.8733886724970493,
+    "mcc": 0.6561743029755913
+   }
+  },
+  {
+   "feature_set": "duval3",
+   "model": "NB",
+   "stage": "test",
+   "n": 91,
+   "metrics": {
+    "accuracy": 0.8461538461538461,
+    "macro": {
+     "precision": 0.5658424908424908,
+     "recall": 0.5467329545454546,
+     "f1": 0.5453100775193798
+    },
+    "weighted": {
+     "precision": 0.858434971621785,
+     "recall": 0.8461538461538461,
+     "f1": 0.8454876906039697
+    },
+    "specificity_weighted": 0.9074280251911832,
+    "mcc": 0.6716882392017154
+   }
+  },
+  {
+   "feature_set": "doern4",
+   "model": "RF",
+   "stage": "cv10_train",
+   "n": 361,
+   "metrics": {
+    "accuracy": 0.8753462603878116,
+    "macro": {
+     "precision": 0.6206380208333333,
+     "recall": 0.5867094861660079,
+     "f1": 0.5945591957379777
+    },
+    "weighted": {
+     "precision": 0.878723020544783,
+     "recall": 0.8753462603878116,
+     "f1": 0.872202430077575
+    },
+    "specificity_weighted": 0.898306446890455,
+    "mcc": 0.7309292006486614
+   }
+  },
+  {
+   "feature_set": "doern4",
+   "model": "RF",
+   "stage": "test",
+   "n": 91,
+   "metrics": {
+    "accuracy": 0.9010989010989011,
+    "macro": {
+     "precision": 0.6353365384615385,
+     "recall": 0.6300662878787879,
+     "f1": 0.6320151466438039
+    },
+    "weighted": {
+     "precision": 0.8929522400676249,
+     "recall": 0.9010989010989011,
+     "f1": 0.8966276105918161
+    },
+    "specificity_weighted": 0.9095005141057773,
+    "mcc": 0.7833629114871444
+   }
+  },
+  {
+   "feature_set": "doern4",
+   "model": "BPNN",
+   "stage": "cv10_train",
+   "n": 361,
+   "metrics": {
+    "accuracy": 0.7174515235457064,
+    "macro": {
+     "precision": 0.5541784702549575,
+     "recall": 0.27954545454545454,
+     "f1": 0.26343337458745875
+    },
+    "weighted": {
+     "precision": 0.7183618058116815,
+     "recall": 0.7174515235457064,
+     "f1": 0.6159995154640118
+    },
+    "specificity_weighted": 0.3501457172596629,
+    "mcc": 0.20315094429711641
+   }
+  },
+  {
+   "feature_set": "doern4",
+   "model": "BPNN",
+   "stage": "test",
+   "n": 91,
+   "metrics": {
+    "accuracy": 0.7032967032967034,
+    "macro": {
+     "precision": 0.17582417582417584,
+     "recall": 0.25,
+     "f1": 0.2064516129032258
+    },
+    "weighted": {
+     "precision": 0.49462625286801115,
+     "recall": 0.7032967032967034,
+     "f1": 0.5807869549805034
+    },
+    "specificity_weighted": 0.2967032967032967,
+    "mcc": 0.0
+   }
+  },
+  {
+   "feature_set": "doern4",
+   "model": "KNN",
+   "stage": "cv10_train",
+   "n": 361,
+   "metrics": {
+    "accuracy": 0.9113573407202216,
+    "macro": {
+     "precision": 0.8969936535726009,
+     "recall": 0.7176877470355731,
+     "f1": 0.7481659773422047
+    },
+    "weighted": {
+     "precision": 0.9219417921852678,
+     "recall": 0.9113573407202216,
+     "f1": 0.9122778850134071
+    },
+    "specificity_weighted": 0.947211421193856,
+    "mcc": 0.8145017733749775
+   }
+  },
+  {
+   "feature_set": "doern4",
+   "model": "KNN",
+   "stage": "test",
+   "n": 91,
+   "metrics": {
+    "accuracy": 0.9120879120879121,
+    "macro": {
+     "precision": 0.6436580882352941,
+     "recall": 0.6467329545454545,
+     "f1": 0.6439732142857143
+    },
+    "weighted": {
+     "precision": 0.906464124111183,
+     "recall": 0.9120879120879121,
+     "f1": 0.9085557299843015
+    },
+    "specificity_weighted": 0.9355485401538033,
+    "mcc": 0.8100725167740356
+   }
+  },
+  {
+   "feature_set": "doern4",
+   "model": "SVM",
+   "stage": "cv10_train",
+   "n": 361,
+   "metrics": {
+    "accuracy": 0.7313019390581718,
+    "macro": {
+     "precision": 0.5588662790697674,
+     "recall": 0.3034090909090909,
+     "f1": 0.304579872149865
+    },
+    "weighted": {
+     "precision": 0.7204229208271595,
+     "recall": 0.7313019390581718,
+     "f1": 0.6465792319238418
+    },
+    "specificity_weighted": 0.40617191353195986,
+    "mcc": 0.27363921289988175
+   }
+  },
+  {
+   "feature_set": "doern4",
+   "model": "SVM",
+   "stage": "test",
+   "n": 91,
+   "metrics": {
+    "accuracy": 0.7362637362637363,
+    "macro": {
+     "precision": 0.5193798449612403,
+     "recall": 0.31212121212121213,
+     "f1": 0.31803418803418804
+    },
+    "weighted": {
+     "precision": 0.6992077689752109,
+     "recall": 0.7362637362637363,
+     "f1": 0.6556551141166526
+    },
+    "specificity_weighted": 0.4226056594477647,
+    "mcc": 0.2875246056605637
+   }
+  },
+  {
+   "feature_set": "doern4",
+   "model": "DT",
+   "stage": "cv10_train",
+   "n": 361,
+   "metrics": {
+    "accuracy": 0.9141274238227147,
+    "macro": {
+     "precision": 0.7099449441338268,
+     "recall": 0.7768610013175231,
+     "f1": 0.7298577660377796
+    },
+    "weighted": {
+     "precision": 0.9264519355328743,
+     "recall": 0.9141274238227147,
+     "f1": 0.919473759035514
+    },
+    "specificity_weighted": 0.9695579384203901,
+    "mcc": 0.82139966729899
+   }
+  },
+  {
+   "feature_set": "doern4",
+   "model": "DT",
+   "stage": "test",
+   "n": 91,
+   "metrics": {
+    "accuracy": 0.9120879120879121,
+    "macro": {
+     "precision": 0.6625,
+     "recall": 0.6467329545454545,
+     "f1": 0.6538658474142345
+    },
+    "weighted": {
+     "precision": 0.9357142857142858,
+     "recall": 0.9120879120879121,
+     "f1": 0.9233582597637897
+    },
+    "specificity_weighted": 0.9894471756313861,
+    "mcc": 0.8175512412409366
+   }
+  },
+  {
+   "feature_set": "doern4",
+   "model": "NB",
+   "stage": "cv10_train",
+   "n": 361,
+   "metrics": {
+    "accuracy": 0.2520775623268698,
+    "macro": {
+     "precision": 0.3849742781728076,
+     "recall": 0.4567358366271409,
+     "f1": 0.2766775378617484
+    },
+    "weighted": {
+     "precision": 0.6836239503259219,
+     "recall": 0.2520775623268698,
+     "f1": 0.2949478070486964
+    },
+    "specificity_weighted": 0.8368291510851883,
+    "mcc": 0.07043641834714652
+   }
+  },
+  {
+   "feature_set": "doern4",
+   "model": "NB",
+   "stage": "test",
+   "n": 91,
+   "metrics": {
+    "accuracy": 0.24175824175824176,
+    "macro": {
+     "precision": 0.42474082934609253,
+     "recall": 0.5336410984848485,
+     "f1": 0.30805749805749805
+    },
+    "weighted": {
+     "precision": 0.6758197942408469,
+     "recall": 0.24175824175824176,
+     "f1": 0.27670893209354747
+    },
+    "specificity_weighted": 0.8270770408928305,
+    "mcc": 0.07341243104100562
+   }
+  },
+  {
+   "feature_set": "rogers3",
+   "model": "RF",
+   "stage": "cv10_train",
+   "n": 361,
+   "metrics": {
+    "accuracy": 0.889196675900277,
+    "macro": {
+     "precision": 0.6011620864562042,
+     "recall": 0.6099802371541502,
+     "f1": 0.6033730996621622
+    },
+    "weighted": {
+     "precision": 0.8764965295843576,
+     "recall": 0.889196675900277,
+     "f1": 0.8815079990828778
+    },
+    "specificity_weighted": 0.9088488622230252,
+    "mcc": 0.7586294423711376
+   }
+  },
+  {
+   "feature_set": "rogers3",
+   "model": "RF",
+   "stage": "test",
+   "n": 91,
+   "metrics": {
+    "accuracy": 0.8681318681318682,
+    "macro": {
+     "precision": 0.5698412698412698,
+     "recall": 0.5807054924242424,
+     "f1": 0.5734908136482939
+    },
+    "weighted": {
+     "precision": 0.866317809174952,
+     "recall": 0.8681318681318682,
+     "f1": 0.8660840471864094
+    },
+    "specificity_weighted": 0.9281887946361631,
+    "mcc": 0.7188863979836219
+   }
+  },
+  {
+   "feature_set": "rogers3",
+   "model": "BPNN",
+   "stage": "cv10_train",
+   "n": 361,
+   "metrics": {
+    "accuracy": 0.7091412742382271,
+    "macro": {
+     "precision": 0.364670868347339,
+     "recall": 0.26704545454545453,
+     "f1": 0.23862704918032787
+    },
+    "weighted": {
+     "precision": 0.5880801073892161,
+     "recall": 0.7091412742382271,
+     "f1": 0.5965805367603652
+    },
+    "specificity_weighted": 0.32474118866631774,
+    "mcc": 0.14567565872579122
+   }
+  },
+  {
+   "feature_set": "rogers3",
+   "model": "BPNN",
+   "stage": "test",
+   "n": 91,
+   "metrics": {
+    "accuracy": 0.7032967032967034,
+    "macro": {
+     "precision": 0.17582417582417584,
+     "recall": 0.25,
+     "f1": 0.2064516129032258
+    },
+    "weighted": {
+     "precision": 0.49462625286801115,
+     "recall": 0.7032967032967034,
+     "f1": 0.5807869549805034
+    },
+    "specificity_weighted": 0.2967032967032967,
+    "mcc": 0.0
+   }
+  },
+  {
+   "feature_set": "rogers3",
+   "model": "KNN",
+   "stage": "cv10_train",
+   "n": 361,
+   "metrics": {
+    "accuracy": 0.8975069252077562,
+    "macro": {
+     "precision": 0.6128755900508351,
+     "recall": 0.644729907773386,
+     "f1": 0.6274193548387097
+    },
+    "weighted": {
+     "precision": 0.9024538973278856,
+     "recall": 0.8975069252077562,
+     "f1": 0.8990438745420427
+    },
+    "specificity_weighted": 0.9655018074957035,
+    "mcc": 0.7885321579141186
+   }
+  },
+  {
+   "feature_set": "rogers3",
+   "model": "KNN",
+   "stage": "test",
+   "n": 91,
+   "metrics": {
+    "accuracy": 0.8571428571428571,
+    "macro": {
+     "precision": 0.5706293706293706,
+     "recall": 0.5512784090909091,
+     "f1": 0.5601152723245747
+    },
+    "weighted": {
+     "precision": 0.861876584953508,
+     "recall": 0.8571428571428571,
+     "f1": 0.8589256811848175
+    },
+    "specificity_weighted": 0.9068922305764411,
+    "mcc": 0.6895081604804787
+   }
+  },
+  {
+   "feature_set": "rogers3",
+   "model": "SVM",
+   "stage": "cv10_train",
+   "n": 361,
+   "metrics": {
+    "accuracy": 0.739612188365651,
+    "macro": {
+     "precision": 0.5408096177326946,
+     "recall": 0.3283267457180501,
+     "f1": 0.34066279043219505
+    },
+    "weighted": {
+     "precision": 0.7280639312388727,
+     "recall": 0.739612188365651,
+     "f1": 0.6668400406149836
+    },
+    "specificity_weighted": 0.4324148671439076,
+    "mcc": 0.313613519738869
+   }
+  },
+  {
+   "feature_set": "rogers3",
+   "model": "SVM",
+   "stage": "test",
+   "n": 91,
+   "metrics": {
+    "accuracy": 0.7032967032967034,
+    "macro": {
+     "precision": 0.17777777777777778,
+     "recall": 0.25,
+     "f1": 0.2077922077922078
+    },
+    "weighted": {
+     "precision": 0.5001221001221001,
+     "recall": 0.7032967032967034,
+     "f1": 0.5845582988440131
+    },
+    "specificity_weighted": 0.32124033374033373,
+    "mcc": 0.06376570003682984
+   }
+  },
+  {
+   "feature_set": "rogers3",
+   "model": "DT",
+   "stage": "cv10_train",
+   "n": 361,
+   "metrics": {
+    "accuracy": 0.9030470914127424,
+    "macro": {
+     "precision": 0.7095811747451092,
+     "recall": 0.7776021080368906,
+     "f1": 0.7296118191958348
+    },
+    "weighted": {
+     "precision": 0.9175955484706222,
+     "recall": 0.9030470914127424,
+     "f1": 0.9091676174287802
+    },
+    "specificity_weighted": 0.9492028639089308,
+    "mcc": 0.7999319631938532
+   }
+  },
+  {
+   "feature_set": "rogers3",
+   "model": "DT",
+   "stage": "test",
+   "n": 91,
+   "metrics": {
+    "accuracy": 0.8901098901098901,
+    "macro": {
+     "precision": 0.6481770833333333,
+     "recall": 0.5885179924242424,
+     "f1": 0.6136376096491228
+    },
+    "weighted": {
+     "precision": 0.9189560439560439,
+     "recall": 0.8901098901098901,
+     "f1": 0.9022556390977444
+    },
+    "specificity_weighted": 0.9632770494612598,
+    "mcc": 0.7665311736895517
+   }
+  },
+  {
+   "feature_set": "rogers3",
+   "model": "NB",
+   "stage": "cv10_train",
+   "n": 361,
+   "metrics": {
+    "accuracy": 0.22714681440443213,
+    "macro": {
+     "precision": 0.4058384597858282,
+     "recall": 0.38379446640316206,
+     "f1": 0.23376224185650415
+    },
+    "weighted": {
+     "precision": 0.7007907580585813,
+     "recall": 0.22714681440443213,
+     "f1": 0.28905979357366673
+    },
+    "specificity_weighted": 0.8338668549144842,
+    "mcc": 0.01296086568535082
+   }
+  },
+  {
+   "feature_set": "rogers3",
+   "model": "NB",
+   "stage": "test",
+   "n": 91,
+   "metrics": {
+    "accuracy": 0.17582417582417584,
+    "macro": {
+     "precision": 0.35075757575757577,
+     "recall": 0.4100378787878788,
+     "f1": 0.19631874298540963
+    },
+    "weighted": {
+     "precision": 0.5855144855144855,
+     "recall": 0.17582417582417584,
+     "f1": 0.20461908461908462
+    },
+    "specificity_weighted": 0.7854331341173445,
+    "mcc": -0.07761307852086814
+   }
+  }
+ ],
+ "confusion": {
+  "duval3|RF": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     0,
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     12,
+     2,
+     1
+    ],
+    [
+     0,
+     0,
+     63,
+     1
+    ],
+    [
+     0,
+     3,
+     0,
+     8
+    ]
+   ]
+  },
+  "duval3|BPNN": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     0,
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     7,
+     5,
+     3
+    ],
+    [
+     0,
+     0,
+     63,
+     1
+    ],
+    [
+     0,
+     3,
+     0,
+     8
+    ]
+   ]
+  },
+  "duval3|KNN": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     0,
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     14,
+     0,
+     1
+    ],
+    [
+     0,
+     4,
+     60,
+     0
+    ],
+    [
+     0,
+     3,
+     0,
+     8
+    ]
+   ]
+  },
+  "duval3|SVM": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     0,
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     11,
+     3,
+     1
+    ],
+    [
+     0,
+     1,
+     63,
+     0
+    ],
+    [
+     0,
+     4,
+     0,
+     7
+    ]
+   ]
+  },
+  "duval3|DT": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     0,
+     1,
+     0,
+     0
+    ],
+    [
+     1,
+     13,
+     0,
+     1
+    ],
+    [
+     0,
+     1,
+     63,
+     0
+    ],
+    [
+     1,
+     1,
+     0,
+     9
+    ]
+   ]
+  },
+  "duval3|NB": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     0,
+     1,
+     0,
+     0
+    ],
+    [
+     2,
+     6,
+     3,
+     4
+    ],
+    [
+     0,
+     1,
+     62,
+     1
+    ],
+    [
+     1,
+     1,
+     0,
+     9
+    ]
+   ]
+  },
+  "doern4|RF": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     0,
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     11,
+     3,
+     1
+    ],
+    [
+     0,
+     2,
+     62,
+     0
+    ],
+    [
+     0,
+     2,
+     0,
+     9
+    ]
+   ]
+  },
+  "doern4|BPNN": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     0,
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     0,
+     15,
+     0
+    ],
+    [
+     0,
+     0,
+     64,
+     0
+    ],
+    [
+     0,
+     0,
+     11,
+     0
+    ]
+   ]
+  },
+  "doern4|KNN": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     0,
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     12,
+     2,
+     1
+    ],
+    [
+     0,
+     2,
+     62,
+     0
+    ],
+    [
+     0,
+     2,
+     0,
+     9
+    ]
+   ]
+  },
+  "doern4|SVM": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     0,
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     1,
+     14,
+     0
+    ],
+    [
+     0,
+     0,
+     64,
+     0
+    ],
+    [
+     0,
+     2,
+     7,
+     2
+    ]
+   ]
+  },
+  "doern4|DT": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     0,
+     1,
+     0,
+     0
+    ],
+    [
+     2,
+     12,
+     0,
+     1
+    ],
+    [
+     0,
+     2,
+     62,
+     0
+    ],
+    [
+     1,
+     1,
+     0,
+     9
+    ]
+   ]
+  },
+  "doern4|NB": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     1,
+     0,
+     0,
+     0
+    ],
+    [
+     7,
+     4,
+     2,
+     2
+    ],
+    [
+     1,
+     53,
+     9,
+     1
+    ],
+    [
+     3,
+     0,
+     0,
+     8
+    ]
+   ]
+  },
+  "rogers3|RF": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     0,
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     11,
+     2,
+     2
+    ],
+    [
+     0,
+     2,
+     61,
+     1
+    ],
+    [
+     0,
+     4,
+     0,
+     7
+    ]
+   ]
+  },
+  "rogers3|BPNN": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     0,
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     0,
+     15,
+     0
+    ],
+    [
+     0,
+     0,
+     64,
+     0
+    ],
+    [
+     0,
+     0,
+     11,
+     0
+    ]
+   ]
+  },
+  "rogers3|KNN": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     0,
+     1,
+     0,
+     0
+    ],
+    [
+     1,
+     9,
+     2,
+     3
+    ],
+    [
+     0,
+     1,
+     62,
+     1
+    ],
+    [
+     1,
+     2,
+     1,
+     7
+    ]
+   ]
+  },
+  "rogers3|SVM": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     0,
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     0,
+     14,
+     1
+    ],
+    [
+     0,
+     0,
+     64,
+     0
+    ],
+    [
+     0,
+     0,
+     11,
+     0
+    ]
+   ]
+  },
+  "rogers3|DT": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     0,
+     1,
+     0,
+     0
+    ],
+    [
+     3,
+     11,
+     0,
+     1
+    ],
+    [
+     0,
+     1,
+     63,
+     0
+    ],
+    [
+     1,
+     2,
+     1,
+     7
+    ]
+   ]
+  },
+  "rogers3|NB": {
+   "labels": [
+    "Arcing",
+    "Normal",
+    "OH",
+    "PD"
+   ],
+   "matrix": [
+    [
+     1,
+     0,
+     0,
+     0
+    ],
+    [
+     5,
+     5,
+     3,
+     2
+    ],
+    [
+     2,
+     54,
+     8,
+     0
+    ],
+    [
+     2,
+     7,
+     0,
+     2
+    ]
+   ]
+  }
+ },
+ "per_class": {
+  "duval3|RF": {
+   "Arcing": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.75,
+    "recall": 0.8,
+    "f1-score": 0.7741935483870968,
+    "support": 15
+   },
+   "OH": {
+    "precision": 0.9692307692307692,
+    "recall": 0.984375,
+    "f1-score": 0.9767441860465116,
+    "support": 64
+   },
+   "PD": {
+    "precision": 0.8,
+    "recall": 0.7272727272727273,
+    "f1-score": 0.7619047619047619,
+    "support": 11
+   }
+  },
+  "duval3|BPNN": {
+   "Arcing": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.7,
+    "recall": 0.4666666666666667,
+    "f1-score": 0.56,
+    "support": 15
+   },
+   "OH": {
+    "precision": 0.9130434782608695,
+    "recall": 0.984375,
+    "f1-score": 0.9473684210526315,
+    "support": 64
+   },
+   "PD": {
+    "precision": 0.6666666666666666,
+    "recall": 0.7272727272727273,
+    "f1-score": 0.6956521739130435,
+    "support": 11
+   }
+  },
+  "duval3|KNN": {
+   "Arcing": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.6363636363636364,
+    "recall": 0.9333333333333333,
+    "f1-score": 0.7567567567567568,
+    "support": 15
+   },
+   "OH": {
+    "precision": 1.0,
+    "recall": 0.9375,
+    "f1-score": 0.967741935483871,
+    "support": 64
+   },
+   "PD": {
+    "precision": 0.8888888888888888,
+    "recall": 0.7272727272727273,
+    "f1-score": 0.8,
+    "support": 11
+   }
+  },
+  "duval3|SVM": {
+   "Arcing": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.6470588235294118,
+    "recall": 0.7333333333333333,
+    "f1-score": 0.6875,
+    "support": 15
+   },
+   "OH": {
+    "precision": 0.9545454545454546,
+    "recall": 0.984375,
+    "f1-score": 0.9692307692307692,
+    "support": 64
+   },
+   "PD": {
+    "precision": 0.875,
+    "recall": 0.6363636363636364,
+    "f1-score": 0.7368421052631579,
+    "support": 11
+   }
+  },
+  "duval3|DT": {
+   "Arcing": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.8125,
+    "recall": 0.8666666666666667,
+    "f1-score": 0.8387096774193549,
+    "support": 15
+   },
+   "OH": {
+    "precision": 1.0,
+    "recall": 0.984375,
+    "f1-score": 0.9921259842519685,
+    "support": 64
+   },
+   "PD": {
+    "precision": 0.9,
+    "recall": 0.8181818181818182,
+    "f1-score": 0.8571428571428571,
+    "support": 11
+   }
+  },
+  "duval3|NB": {
+   "Arcing": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.6666666666666666,
+    "recall": 0.4,
+    "f1-score": 0.5,
+    "support": 15
+   },
+   "OH": {
+    "precision": 0.9538461538461539,
+    "recall": 0.96875,
+    "f1-score": 0.9612403100775194,
+    "support": 64
+   },
+   "PD": {
+    "precision": 0.6428571428571429,
+    "recall": 0.8181818181818182,
+    "f1-score": 0.72,
+    "support": 11
+   }
+  },
+  "doern4|RF": {
+   "Arcing": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.6875,
+    "recall": 0.7333333333333333,
+    "f1-score": 0.7096774193548387,
+    "support": 15
+   },
+   "OH": {
+    "precision": 0.9538461538461539,
+    "recall": 0.96875,
+    "f1-score": 0.9612403100775194,
+    "support": 64
+   },
+   "PD": {
+    "precision": 0.9,
+    "recall": 0.8181818181818182,
+    "f1-score": 0.8571428571428571,
+    "support": 11
+   }
+  },
+  "doern4|BPNN": {
+   "Arcing": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 15
+   },
+   "OH": {
+    "precision": 0.7032967032967034,
+    "recall": 1.0,
+    "f1-score": 0.8258064516129032,
+    "support": 64
+   },
+   "PD": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 11
+   }
+  },
+  "doern4|KNN": {
+   "Arcing": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.7058823529411765,
+    "recall": 0.8,
+    "f1-score": 0.75,
+    "support": 15
+   },
+   "OH": {
+    "precision": 0.96875,
+    "recall": 0.96875,
+    "f1-score": 0.96875,
+    "support": 64
+   },
+   "PD": {
+    "precision": 0.9,
+    "recall": 0.8181818181818182,
+    "f1-score": 0.8571428571428571,
+    "support": 11
+   }
+  },
+  "doern4|SVM": {
+   "Arcing": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.3333333333333333,
+    "recall": 0.06666666666666667,
+    "f1-score": 0.1111111111111111,
+    "support": 15
+   },
+   "OH": {
+    "precision": 0.7441860465116279,
+    "recall": 1.0,
+    "f1-score": 0.8533333333333334,
+    "support": 64
+   },
+   "PD": {
+    "precision": 1.0,
+    "recall": 0.18181818181818182,
+    "f1-score": 0.3076923076923077,
+    "support": 11
+   }
+  },
+  "doern4|DT": {
+   "Arcing": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.75,
+    "recall": 0.8,
+    "f1-score": 0.7741935483870968,
+    "support": 15
+   },
+   "OH": {
+    "precision": 1.0,
+    "recall": 0.96875,
+    "f1-score": 0.9841269841269841,
+    "support": 64
+   },
+   "PD": {
+    "precision": 0.9,
+    "recall": 0.8181818181818182,
+    "f1-score": 0.8571428571428571,
+    "support": 11
+   }
+  },
+  "doern4|NB": {
+   "Arcing": {
+    "precision": 0.08333333333333333,
+    "recall": 1.0,
+    "f1-score": 0.15384615384615385,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.07017543859649122,
+    "recall": 0.26666666666666666,
+    "f1-score": 0.1111111111111111,
+    "support": 15
+   },
+   "OH": {
+    "precision": 0.8181818181818182,
+    "recall": 0.140625,
+    "f1-score": 0.24,
+    "support": 64
+   },
+   "PD": {
+    "precision": 0.7272727272727273,
+    "recall": 0.7272727272727273,
+    "f1-score": 0.7272727272727273,
+    "support": 11
+   }
+  },
+  "rogers3|RF": {
+   "Arcing": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.6111111111111112,
+    "recall": 0.7333333333333333,
+    "f1-score": 0.6666666666666666,
+    "support": 15
+   },
+   "OH": {
+    "precision": 0.9682539682539683,
+    "recall": 0.953125,
+    "f1-score": 0.9606299212598425,
+    "support": 64
+   },
+   "PD": {
+    "precision": 0.7,
+    "recall": 0.6363636363636364,
+    "f1-score": 0.6666666666666666,
+    "support": 11
+   }
+  },
+  "rogers3|BPNN": {
+   "Arcing": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 15
+   },
+   "OH": {
+    "precision": 0.7032967032967034,
+    "recall": 1.0,
+    "f1-score": 0.8258064516129032,
+    "support": 64
+   },
+   "PD": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 11
+   }
+  },
+  "rogers3|KNN": {
+   "Arcing": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.6923076923076923,
+    "recall": 0.6,
+    "f1-score": 0.6428571428571429,
+    "support": 15
+   },
+   "OH": {
+    "precision": 0.9538461538461539,
+    "recall": 0.96875,
+    "f1-score": 0.9612403100775194,
+    "support": 64
+   },
+   "PD": {
+    "precision": 0.6363636363636364,
+    "recall": 0.6363636363636364,
+    "f1-score": 0.6363636363636364,
+    "support": 11
+   }
+  },
+  "rogers3|SVM": {
+   "Arcing": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 15
+   },
+   "OH": {
+    "precision": 0.7111111111111111,
+    "recall": 1.0,
+    "f1-score": 0.8311688311688312,
+    "support": 64
+   },
+   "PD": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 11
+   }
+  },
+  "rogers3|DT": {
+   "Arcing": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.7333333333333333,
+    "recall": 0.7333333333333333,
+    "f1-score": 0.7333333333333333,
+    "support": 15
+   },
+   "OH": {
+    "precision": 0.984375,
+    "recall": 0.984375,
+    "f1-score": 0.984375,
+    "support": 64
+   },
+   "PD": {
+    "precision": 0.875,
+    "recall": 0.6363636363636364,
+    "f1-score": 0.7368421052631579,
+    "support": 11
+   }
+  },
+  "rogers3|NB": {
+   "Arcing": {
+    "precision": 0.1,
+    "recall": 1.0,
+    "f1-score": 0.18181818181818182,
+    "support": 1
+   },
+   "Normal": {
+    "precision": 0.07575757575757576,
+    "recall": 0.3333333333333333,
+    "f1-score": 0.12345679012345678,
+    "support": 15
+   },
+   "OH": {
+    "precision": 0.7272727272727273,
+    "recall": 0.125,
+    "f1-score": 0.21333333333333335,
+    "support": 64
+   },
+   "PD": {
+    "precision": 0.5,
+    "recall": 0.18181818181818182,
+    "f1-score": 0.26666666666666666,
+    "support": 11
+   }
+  }
+ },
+ "labels": [
+  "Arcing",
+  "Normal",
+  "OH",
+  "PD"
+ ],
+ "warnings": [
+  {
+   "case": "duval3",
+   "model": "RF",
+   "warning": "The least populated class in y has only 4 members, which is less than n_splits=10."
+  },
+  {
+   "case": "duval3",
+   "model": "BPNN",
+   "warning": "The least populated class in y has only 4 members, which is less than n_splits=10."
+  },
+  {
+   "case": "duval3",
+   "model": "BPNN",
+   "warning": "Stochastic Optimizer: Maximum iterations (1000) reached and the optimization hasn't converged yet."
+  },
+  {
+   "case": "duval3",
+   "model": "KNN",
+   "warning": "The least populated class in y has only 4 members, which is less than n_splits=10."
+  },
+  {
+   "case": "duval3",
+   "model": "SVM",
+   "warning": "The least populated class in y has only 4 members, which is less than n_splits=10."
+  },
+  {
+   "case": "duval3",
+   "model": "DT",
+   "warning": "The least populated class in y has only 4 members, which is less than n_splits=10."
+  },
+  {
+   "case": "duval3",
+   "model": "NB",
+   "warning": "The least populated class in y has only 4 members, which is less than n_splits=10."
+  },
+  {
+   "case": "doern4",
+   "model": "RF",
+   "warning": "The least populated class in y has only 4 members, which is less than n_splits=10."
+  },
+  {
+   "case": "doern4",
+   "model": "BPNN",
+   "warning": "The least populated class in y has only 4 members, which is less than n_splits=10."
+  },
+  {
+   "case": "doern4",
+   "model": "BPNN",
+   "warning": "Stochastic Optimizer: Maximum iterations (1000) reached and the optimization hasn't converged yet."
+  },
+  {
+   "case": "doern4",
+   "model": "KNN",
+   "warning": "The least populated class in y has only 4 members, which is less than n_splits=10."
+  },
+  {
+   "case": "doern4",
+   "model": "SVM",
+   "warning": "The least populated class in y has only 4 members, which is less than n_splits=10."
+  },
+  {
+   "case": "doern4",
+   "model": "DT",
+   "warning": "The least populated class in y has only 4 members, which is less than n_splits=10."
+  },
+  {
+   "case": "doern4",
+   "model": "NB",
+   "warning": "The least populated class in y has only 4 members, which is less than n_splits=10."
+  },
+  {
+   "case": "rogers3",
+   "model": "RF",
+   "warning": "The least populated class in y has only 4 members, which is less than n_splits=10."
+  },
+  {
+   "case": "rogers3",
+   "model": "BPNN",
+   "warning": "The least populated class in y has only 4 members, which is less than n_splits=10."
+  },
+  {
+   "case": "rogers3",
+   "model": "BPNN",
+   "warning": "Stochastic Optimizer: Maximum iterations (1000) reached and the optimization hasn't converged yet."
+  },
+  {
+   "case": "rogers3",
+   "model": "KNN",
+   "warning": "The least populated class in y has only 4 members, which is less than n_splits=10."
+  },
+  {
+   "case": "rogers3",
+   "model": "SVM",
+   "warning": "The least populated class in y has only 4 members, which is less than n_splits=10."
+  },
+  {
+   "case": "rogers3",
+   "model": "DT",
+   "warning": "The least populated class in y has only 4 members, which is less than n_splits=10."
+  },
+  {
+   "case": "rogers3",
+   "model": "NB",
+   "warning": "The least populated class in y has only 4 members, which is less than n_splits=10."
+  }
+ ],
+ "split": {
+  "test_size": 0.2,
+  "random_state": 42,
+  "stratified": true,
+  "n_rows": 452,
+  "cv": "StratifiedKFold(10, shuffle=True, random_state=42)"
+ }
+}

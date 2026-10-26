@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+body { @apply bg-surface text-slate-800 antialiased; font-feature-settings: "tnum"; }
+.num { font-variant-numeric: tabular-nums; }
+.card { @apply rounded-lg border border-slate-200 bg-white shadow-card; }
+.label { @apply text-xs font-medium uppercase tracking-wide text-slate-500; }
+.btn { @apply inline-flex items-center justify-center gap-2 rounded-md px-3.5 py-2 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50; }
+.btn-primary { @apply btn bg-brand-600 text-white hover:bg-brand-700; }
+.btn-secondary { @apply btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-50; }
+.input { @apply w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500; }
+.input-error { @apply border-red-400 focus:border-red-500 focus:ring-red-500; }
+th { @apply whitespace-nowrap; }
